@@ -1,0 +1,14 @@
+
+<div class="mainContent">
+    <div class="addtodo">
+        <h2>Add task </h2>
+        <label>Description: </label>
+        <input class="description" type="text" [(ngModel)]="description">
+        <select class="familyName" (change)="onOptionSelected($event)">
+            <option selected disabled hidden>Choose name</option>
+            <option *ngFor="let member of members" [value]="member.id">{{member.name}}</option>
+        </select>
+        <input type="button" class="addbutton button2" value="Add task" (click)="onAddTask()">
+    </div>
+</div>
+

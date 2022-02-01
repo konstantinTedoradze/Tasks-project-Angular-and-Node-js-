@@ -1,0 +1,22 @@
+<h1 class="taskHeader">Tasks</h1>
+
+
+<table id="customers">
+    <tr>
+        <th>Description</th>
+        <th>Name</th>
+        <th>Creation Date</th>
+        <th>Delete</th>
+    </tr>
+
+   
+    <tr class="tableDiv" *ngFor="let list of lists">
+            <td> {{list.description}} </td>
+            <td>{{list.name}}</td>
+            <td>{{list.creation_date.split('T')[0]}}</td>
+            <td>
+                <button class="deleteButton button1" (click)="onDelete(list.id)">Delete</button>
+            </td>
+     </tr>
+     
+</table> 
